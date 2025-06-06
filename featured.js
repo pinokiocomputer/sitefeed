@@ -6,7 +6,7 @@ module.exports = [
 //  },
 //    ["cocktailpeanut", "https://github.com/cocktailpeanutlabs/whisperspeech"],
 //    ["cocktailpeanut", "https://github.com/pinokiofactory/sd35"],
-  ["cocktailpeanut", "https://github.com/pinokiofactory/fish"],
+  ["cocktailpeanut", "https://github.com/pinokiofactory/openaudio"],
   ["henryruhs", "https://github.com/facefusion/facefusion-pinokio"],
   ["SUP3RMASS1VE", "https://github.com/pinokiofactory/Frame-Pack"],
   ["cocktailpeanut", "https://github.com/pinokiofactory/dia"],
