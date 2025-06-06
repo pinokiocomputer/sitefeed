@@ -6,11 +6,9 @@ const news = require('./news')
 const featured = require('./featured')
 const ban = require('./ban')
 function cloneRepo(repoUrl, targetDir) {
-  console.log("clone", { repoUrl, targetDir })
   return new Promise((resolve, reject) => {
     const gitProcess = spawn('git', ['clone', '--depth', '1', repoUrl, targetDir]);
     gitProcess.stdout.on('data', data => {
-      console.log(`stdout: ${data}`);
     });
     gitProcess.stderr.on('data', data => {
       console.error(`stderr: ${data}`);
@@ -45,7 +43,6 @@ function gitBranch(cwd) {
     });
   });
 }
-
 const run = async () => {
   // 1. Go through the featured array
   let items = []
@@ -54,14 +51,11 @@ const run = async () => {
     let [username, item, b] = entry
     let pinokio_url
     let mod
-
     // git clone
     const href = new URL(item)
     const pathname = href.pathname.split("/").filter(x => x)
     const host = href.host
     const folderName = host.split(".").join("-") + "-" + pathname.join("-") 
-
-//      const folderName = item.split("/").join("-")
     const dir = path.join(__dirname, "temp", folderName)
     try {
       await fs.promises.rm(dir)
@@ -76,54 +70,36 @@ const run = async () => {
     mod = require(path.resolve(dir, "pinokio.js"))
     const branch = await gitBranch(dir)
     let title = mod.title ? mod.title : pathname
-//
-//https://huggingface.co/spaces/zcxu-eric/magicanimate/blob/main/requirements.txt
-//https://huggingface.co/spaces/zcxu-eric/magicanimate/raw/main/requirements.txt
-
     let image
     if (/github/.test(href.host)) {
       image = `https://raw.githubusercontent.com/${pathname.join("/")}/${branch}/${mod.icon}`
     } else if (/huggingface/.test(href.host)) {
       image = `https://huggingface.co/${pathname.join("/")}/raw/${branch}/${mod.icon}`
     }
-    
-//    let image = "https://raw.githubusercontent.com/" + item + "/main/" + mod.icon
-//    let url = "https://github.com/" + item
-//    let download = "https://github.com/" + item
-
-    url = item
-    download = url
-    
-    let description = mod.description
-
-
     items.push({
       version: mod.version,
       bitcoin: mod.bitcoin,
       links: mod.links,
       branch: b,
       title,
-      url,
+      url: item,
       image,
       path: item,
-      description,
-      download,
+      description: mod.description,
+      download: item,
       author_username: username,
       author_avatar: authors[username].avatar,
       author_url: authors[username].url
     })
   }
 
+  // Write JSON
   await fs.promises.rm(path.resolve(__dirname, "temp"), { recursive: true }).catch((e) => { })
-
   let featuredFile = path.resolve(__dirname, "docs", "featured.json")
   await fs.promises.writeFile(featuredFile, JSON.stringify(items, null, 2))
-
   let newsFile = path.resolve(__dirname, "docs", "news.json")
   await fs.promises.writeFile(newsFile, JSON.stringify(news, null, 2))
-
   let banFile = path.resolve(__dirname, "docs", "ban.json")
   await fs.promises.writeFile(banFile, JSON.stringify(ban, null, 2))
-
 }
 run()
