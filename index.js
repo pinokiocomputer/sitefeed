@@ -1,7 +1,6 @@
 const path = require('path')
 const fs = require('fs')
 const { spawn } = require('child_process');
-
 function cloneRepo(repoUrl, targetDir) {
   console.log("clone", { repoUrl, targetDir })
   return new Promise((resolve, reject) => {
