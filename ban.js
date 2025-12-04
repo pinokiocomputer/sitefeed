@@ -1,5 +1,6 @@
 module.exports = {
   accounts: [
-    "uwuwuwu363"
+    "uwuwuwu363",
+    "soldier444xd"
   ]
 }
