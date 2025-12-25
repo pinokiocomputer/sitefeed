@@ -136,7 +136,7 @@ module.exports = [
   ["cocktailpeanut", "https://github.com/cocktailpeanut/AudioSep.pinokio"],
   ["cocktailpeanut", "https://github.com/cocktailpeanut/xtts.pinokio"],
   ["cocktailpeanut", "https://github.com/cocktailpeanut/rvc.pinokio"],
-  ["cocktailpeanut", "https://github.com/cocktailpeanut/animatediff.pinokio"],
+//  ["cocktailpeanut", "https://github.com/cocktailpeanut/animatediff.pinokio"],
   ["cocktailpeanut", "https://github.com/cocktailpeanut/lavie.pinokio"],
   ["cocktailpeanut", "https://huggingface.co/spaces/cocktailpeanut/leditsplusplus"],
   ["cocktailpeanut", "https://github.com/cocktailpeanut/oobabooga.pinokio"],
