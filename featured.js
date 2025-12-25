@@ -122,7 +122,7 @@ module.exports = [
   //["cocktailpeanut", "https://github.com/cocktailpeanutlabs/invokeai"],
   //["cocktailpeanut", "https://github.com/cocktailpeanutlabs/streamdiffusion"],
   ["cocktailpeanut", "https://github.com/cocktailpeanutlabs/dreamtalk"],
-  ["cocktailpeanut", "https://github.com/cocktailpeanutlabs/automatic1111"],
+//  ["cocktailpeanut", "https://github.com/cocktailpeanutlabs/automatic1111"],
   ["cocktailpeanut", "https://github.com/cocktailpeanutlabs/vid2openpose"],
   ["cocktailpeanut", "https://github.com/cocktailpeanut/StyleAligned.pinokio"],
 //    ["cocktailpeanut", "https://github.com/cocktailpeanut/vid2openpose.pinokio"],
