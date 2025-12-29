@@ -1,4 +1,8 @@
 module.exports = {
+  "BazedFrog": {
+    url: "https://x.com/Bazed_X_",
+    avatar: "https://avatars.githubusercontent.com/u/168938748?v=4"
+  },
   "cocktailpeanut": {
     url: "https://x.com/cocktailpeanut",
     avatar: "https://pbs.twimg.com/profile_images/1904994154658373632/CKBBVmtg_400x400.jpg",
