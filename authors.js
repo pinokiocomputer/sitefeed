@@ -1,4 +1,8 @@
 module.exports = {
+  "franzipol": {
+    url: "https://x.com/franzipol",
+    avatar: "https://avatars.githubusercontent.com/u/96065025?v=4"
+  },
   "BazedFrog": {
     url: "https://x.com/Bazed_X_",
     avatar: "https://avatars.githubusercontent.com/u/168938748?v=4"
