@@ -6,6 +6,7 @@ module.exports = [
 //  },
 //    ["cocktailpeanut", "https://github.com/cocktailpeanutlabs/whisperspeech"],
 //    ["cocktailpeanut", "https://github.com/pinokiofactory/sd35"],
+  ["SUP3RMASS1VE", "https://github.com/SUP3RMASS1VE/Qwen3-TTS-Pinokio"],
   ["cocktailpeanut", "https://github.com/pinokiofactory/wan"],
   ["franzipol", "https://github.com/francescofugazzi/ml-sharp-pinokio"],
   ["BazedFrog", "https://github.com/BazedFrog/SongGeneration-Studio"],
